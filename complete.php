@@ -1,8 +1,9 @@
 <?php
   session_start();
+  require_once("functions.php"); 
 
   $name = $_SESSION['name'];
-  $hobby = $_SESSION['email'];
+  $email = $_SESSION['email'];
   $gender = $_SESSION['gender'];
 ?>
 
