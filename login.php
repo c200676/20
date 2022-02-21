@@ -38,6 +38,11 @@ if (!empty($_POST)) {
             }else{
 				// ログイン認証失敗
 				$error['login'] = 'failed';
+				if ($_POST['save'] == 'on') {
+				    setcookie('id', $_POST['id'], miss_count()+1);
+				}
+				header('Location: index2.php');
+				exit();
             } 
         }catch (PDOException $e){
             echo($e->getMessage());
